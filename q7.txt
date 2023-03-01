@@ -1,0 +1,6 @@
+SELECT a.firstname, a.lastname, b.departmentname
+FROM worker a
+INNER JOIN dept b ON a.departmentid = b.departmentid
+WHERE EXISTS
+(SELECT * FROM assign c
+WHERE a.empid = c.empid AND c.projno= 1019);
