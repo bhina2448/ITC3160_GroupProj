@@ -1,0 +1,4 @@
+SELECT a.lastname, a.firstname
+FROM WORKER a INNER JOIN ASSIGN b ON a.empid=b.empid
+WHERE a.projno= 1001
+ORDER BY a.lastname;
