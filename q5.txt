@@ -1,0 +1,5 @@
+SELECT lastname, firstname
+FROM WORKER
+WHERE departmentid=2
+AND salary <= ALL
+(SELECT salary FROM WORKER WHERE departmentid=2);
