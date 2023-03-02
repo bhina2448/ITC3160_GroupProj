@@ -1,0 +1,3 @@
+select a.projno, a.projname, a.startdate
+from project a
+where a.startdate = any (select startdate from project where projno != a.projno);

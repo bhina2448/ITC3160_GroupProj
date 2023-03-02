@@ -1,0 +1,6 @@
+create view Q9
+as select p.projno, p.projname, a.empid, w.firstname, w.lastname
+from project p 
+inner join assign a on p.projno= a.projno
+inner join worker w on w.empid= a.empid
+order by p.projno;

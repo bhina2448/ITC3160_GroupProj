@@ -1,0 +1,10 @@
+insert into worker values (300, 'Smith', 'Bob', 2, '01-JUN-02', '02-MAR-23', 123456);
+
+select a.firstname, a.lastname, 
+b.firstname|| ' ' || b.lastname as "Manager Name"
+from worker a, worker b
+where (a.empid = any
+((select empid from worker)
+minus
+(select empid from assign)))
+and (b.empid = any (select mgrid from dept where departmentid = a.departmentid));

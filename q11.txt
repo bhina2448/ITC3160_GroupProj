@@ -1,0 +1,7 @@
+insert into worker values (200, 'Hina', 'Brielle', 2, '01-JUN-02', '02-MAR-23', 123456);
+insert into worker values (201, 'Makrisdis', 'Panagiotis', 2, '15-JAN-98', '02-MAR-23', 123456);
+insert into assign values (1001, 200, 20, '');
+insert into assign values (1005, 200, 10, 5);
+insert into assign values (1041, 201, 20, 5);
+insert into assign values (1030, 201, 10, '');
+Select * from q9;

@@ -1,0 +1,3 @@
+Select projno, projname
+from Q9
+where empid= 101;
