@@ -1,0 +1,3 @@
+ALTER TABLE project ADD numEmployeesAssigned number;
+update project p set p.numEmployeesAssigned = 
+(SELECT count(empid) from assign a where p.projno= a.projno group by a.projno);
