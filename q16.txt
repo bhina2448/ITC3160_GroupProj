@@ -1,5 +1,5 @@
 SELECT a.projno, a.projname, a.startdate
-FROM PROJECT a
+FROM PROJECT a 
 WHERE a.startdate = ANY 
     (SELECT startdate 
     FROM PROJECT 
