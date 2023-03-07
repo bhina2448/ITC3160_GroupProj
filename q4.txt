@@ -4,3 +4,4 @@ INNER JOIN ASSIGN b
 ON a.empid=b.empid
 WHERE b.projno= 1001
 ORDER BY a.lastname;
+ 
