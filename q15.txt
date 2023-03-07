@@ -1,10 +1,9 @@
-insert into worker values (300, 'Smith', 'Bob', 2, '01-JUN-02', '02-MAR-23', 123456);
+INSERT INTO WORKER 
+VALUES (300, 'Smith', 'Bob', 2, '01-JUN-02', '02-MAR-23', 123456);
 
-select a.firstname, a.lastname, 
-b.firstname|| ' ' || b.lastname as "Manager Name"
-from worker a, worker b
-where (a.empid = any
-((select empid from worker)
-minus
-(select empid from assign)))
-and (b.empid = any (select mgrid from dept where departmentid = a.departmentid));
+SELECT a.firstname ||' '|| a.lastname AS "Employee Name", 
+b.firstname || ' ' || b.lastname AS "Manager Name"
+FROM WORKER a, 
+WORKER b
+WHERE (a.empid = ANY((SELECT empid FROM WORKER) MINUS (SELECT empid FROM ASSIGN)))
+AND (b.empid = ANY (SELECT mgrid FROM DEPT WHERE departmentid = a.departmentid));
