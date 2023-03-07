@@ -1,0 +1,19 @@
+CREATE OR REPLACE TRIGGER UPDATE_numEmployeesAssigned
+after insert or delete or update on Assign
+      for each row
+begin
+    update project
+            set numEmployeesAssigned= numEmployeesAssigned -1
+            where projno= :old.projno;
+    update project
+            set numEmployeesAssigned= numEmployeesAssigned +1
+            where projno= :new.projno;
+end;
+/
+
+update assign set projno= 1001 where (projno=1030 AND empid=101);
+insert into assign values(1030,118,10,5);
+delete from assign where projno=1030 and empid=118;
+
+select * from assign;
+select * from project;
