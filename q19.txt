@@ -7,6 +7,6 @@ SET p.numEmployeesAssigned =
     FROM ASSIGN a 
     WHERE p.projno= a.projno 
     GROUP BY a.projno);
-    
+     
 SELECT * 
 FROM PROJECT;
