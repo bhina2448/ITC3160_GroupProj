@@ -1,6 +1,9 @@
-SELECT a.firstname, a.lastname, b.departmentname
-FROM worker a
-INNER JOIN dept b ON a.departmentid = b.departmentid
-WHERE EXISTS
-(SELECT * FROM assign c
-WHERE a.empid = c.empid AND c.projno= 1019);
+SELECT a.firstname ||' '|| a.lastname as "Name", 
+b.departmentname 
+FROM WORKER a 
+INNER JOIN DEPT b ON a.departmentid = b.departmentid 
+WHERE EXISTS 
+    (SELECT * 
+    FROM assign c 
+    WHERE a.empid = c.empid  
+    AND c.projno= 1019); 
