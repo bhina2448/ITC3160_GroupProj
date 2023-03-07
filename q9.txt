@@ -6,6 +6,6 @@ ON p.projno= a.projno
 INNER JOIN WORKER w 
 ON w.empid= a.empid
 ORDER BY p.projno;
-
+ 
 SELECT *
 FROM Q9;
