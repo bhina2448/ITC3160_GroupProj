@@ -1,3 +1,7 @@
-SELECT firstname, lastname FROM
-(SELECT * FROM WORKER a inner join dept b on a.departmentid=b.departmentid)
-WHERE DEPARTMENTNAME='Accounting';
+SELECT firstname ||'  '|| lastname AS "Name"
+FROM
+    (SELECT * 
+    FROM WORKER a 
+    INNER JOIN DEPT b 
+    ON a.departmentid=b.departmentid)
+WHERE departmentname='Accounting';
