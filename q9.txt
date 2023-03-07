@@ -1,6 +1,11 @@
-create view Q9
-as select p.projno, p.projname, a.empid, w.firstname, w.lastname
-from project p 
-inner join assign a on p.projno= a.projno
-inner join worker w on w.empid= a.empid
-order by p.projno;
+CREATE VIEW Q9
+AS SELECT p.projno, p.projname, a.empid, w.firstname, w.lastname
+FROM PROJECT p 
+INNER JOIN ASSIGN a 
+ON p.projno= a.projno
+INNER JOIN WORKER w 
+ON w.empid= a.empid
+ORDER BY p.projno;
+
+SELECT *
+FROM Q9;
