@@ -12,3 +12,4 @@ WHERE EXISTS
         WHERE firstname= 'Michael' 
         AND lastname='Burns'))
 ORDER BY a.lastname;
+ 
