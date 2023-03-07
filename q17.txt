@@ -1,5 +1,18 @@
-ALTER TABLE project ADD status varchar2(30);
-UPDATE project SET status= 'active' WHERE projmgrid= 101;
-UPDATE project SET status= 'completed' WHERE projno= 1043;
-UPDATE project SET status= 'canceled' WHERE projno= 1042;
-select * from project where status='active';
+ALTER TABLE PROJECT 
+ADD status varchar2(30);
+
+UPDATE PROJECT 
+SET status= 'active' 
+WHERE projmgrid= 101;
+
+UPDATE PROJECT 
+SET status= 'completed' 
+WHERE projno= 1043;
+
+UPDATE PROJECT 
+SET status= 'canceled' 
+WHERE projno= 1042;
+
+SELECT * 
+FROM PROJECT 
+WHERE status='active';
