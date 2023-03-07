@@ -1,3 +1,5 @@
 UPDATE ASSIGN 
 SET hoursassigned=10 
 WHERE empid=110 AND projno=1019;
+
+SELECT * FROM ASSIGN;
