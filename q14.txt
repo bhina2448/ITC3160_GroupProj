@@ -1,1 +1,5 @@
-select projno, count(empid), sum(hoursassigned) from assign group by projno;
+SELECT projno, 
+COUNT(empid), 
+SUM(hoursassigned) 
+FROM ASSIGN 
+GROUP BY projno;
