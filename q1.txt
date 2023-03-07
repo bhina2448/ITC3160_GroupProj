@@ -1,5 +1,5 @@
 SELECT firstname ||'  '|| lastname AS "Name"
-FROM
+FROM 
     (SELECT * 
     FROM WORKER a 
     INNER JOIN DEPT b 
