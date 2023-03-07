@@ -3,3 +3,4 @@ FROM PROJECT
 WHERE budget >= ALL
     (SELECT budget 
     FROM PROJECT);
+ 
