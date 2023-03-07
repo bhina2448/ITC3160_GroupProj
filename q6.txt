@@ -1,4 +1,5 @@
 SELECT *
-FROM project
+FROM PROJECT
 WHERE budget >= ALL
-(SELECT budget FROM project);
+    (SELECT budget 
+    FROM PROJECT);
