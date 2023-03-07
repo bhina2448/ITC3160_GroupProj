@@ -1,1 +1,6 @@
-select * from q9 where projno = any (Select projno from project where startdate> '01-SEP-21');
+SELECT * 
+FROM Q9 
+WHERE projno = ANY 
+    (SELECT projno 
+    FROM PROJECT 
+    WHERE startdate> '01-SEP-21');
