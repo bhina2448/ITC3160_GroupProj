@@ -16,3 +16,4 @@ WHERE projno= 1042;
 SELECT * 
 FROM PROJECT 
 WHERE status='active';
+ 
