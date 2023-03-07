@@ -1,5 +1,5 @@
 SELECT * 
-FROM Q9 
+FROM Q9  
 WHERE projno = ANY 
     (SELECT projno 
     FROM PROJECT 
