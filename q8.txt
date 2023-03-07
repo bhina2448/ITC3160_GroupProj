@@ -1,9 +1,14 @@
 SELECT a.lastname, a.firstname, b.rating
-FROM worker a
-INNER JOIN assign b on a.empid = b.empid
+FROM WORKER a
+INNER JOIN ASSIGN b 
+ON a.empid = b.empid
 WHERE EXISTS
-(SELECT * FROM project c
-WHERE b.projno= c.projno AND c.projmgrid = (
-SELECT empid FROM worker
-WHERE firstname= 'Michael' AND lastname='Burns'))
+    (SELECT * 
+    FROM PROJECT c
+    WHERE b.projno= c.projno 
+    AND c.projmgrid = (
+        SELECT empid 
+        FROM WORKER
+        WHERE firstname= 'Michael' 
+        AND lastname='Burns'))
 ORDER BY a.lastname;
