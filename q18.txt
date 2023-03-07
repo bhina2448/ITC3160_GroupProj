@@ -1,1 +1,4 @@
-Select empid, projno from assign where rating is null;
+SELECT empid, 
+projno 
+FROM ASSIGN 
+WHERE rating IS null;
